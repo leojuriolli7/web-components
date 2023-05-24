@@ -24,12 +24,6 @@
       "~/*": ["./app/*"]
     }
   },
-  "include": [
-    ".next/types/**/*.ts",
-    "next-env.d.ts",
-    "next.config.mjs",
-    "app",
-    "prisma/enums.ts"
-  ],
+  "include": [".next/types/**/*.ts", "next-env.d.ts", "next.config.mjs", "app"],
   "exclude": ["node_modules"]
 }

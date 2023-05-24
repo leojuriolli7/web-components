@@ -13,14 +13,14 @@ That's where this generator comes in. It pulls out all your enums into a separat
 ### Install dependencies
 
 ```sh
-pnpm add -D @prisma-enums/generator
+pnpm add -D @juriolli/generator
 ```
 
 ### Add generator to schema.prisma
 
 ```prisma title="./schema.prisma"
 generator enum {
-  provider = "prisma-enums"
+  provider = "juriolli"
 }
 ```
 
@@ -50,7 +50,7 @@ You can set the `output` option to change the output directory of the generated 
 
 ```prisma title="./schema.prisma"
 generator enum {
-  provider = "prisma-enums"
+  provider = "juriolli"
   output = "."
   file = "enums.ts"
 }

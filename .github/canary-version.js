@@ -24,8 +24,8 @@ try {
 
       const content = JSON.stringify(pkg, null, "\t") + "\n";
       const newContent = content.replace(
-        new RegExp(`"@prisma-enums/\\*": "${oldVersion}"`, "g"),
-        `"@prisma-enums/*": "${newVersion}"`
+        new RegExp(`"@juriolli/\\*": "${oldVersion}"`, "g"),
+        `"@juriolli/*": "${newVersion}"`
       );
 
       fs.writeFileSync(pkgJsonPath, newContent);

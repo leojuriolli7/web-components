@@ -2,12 +2,12 @@
   "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
   "changelog": [
     "@changesets/changelog-github",
-    { "repo": "juliusmarminge/acme-corp-lib" }
+    { "repo": "leojuriolli7/ts-acme-lib" }
   ],
   "commit": false,
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "fixed": [["@prisma-enums/generator", "@prisma-enums/eslint-plugin"]],
-  "ignore": ["@examples/nextjs", "@prisma-enums/docs"]
+  "fixed": [["@juriolli/web-components"]],
+  "ignore": ["@examples/nextjs", "@juriolli/docs"]
 }
