@@ -41,8 +41,7 @@ export const siteConfig = {
     },
   ],
   links: {
-    twitter: "https://twitter.com/jullerino",
-    github: "https://github.com/juliusmarminge/acme-corp-lib",
+    github: "https://github.com/leojuriolli7/web-components",
     docs: "/docs",
   },
 };
