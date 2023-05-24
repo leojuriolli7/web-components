@@ -27,6 +27,7 @@ const config = {
   },
   ignorePatterns: [
     "**/dist/**",
+    "./scripts/*",
     "**/node_modules/**",
     ".eslintrc.cjs",
     "**/config.*",

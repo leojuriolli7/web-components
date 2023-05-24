@@ -12,7 +12,7 @@
     "typecheck": "turbo typecheck",
     "run:playground": "pnpm -C examples/nextjs dev",
     "run:docs": "pnpm -C docs/ dev",
-    "release:canary": "node .github/canary-version.js && pnpm build && pnpm publish ./src --access public --tag canary --no-git-checks"
+    "release:alpha": "node release-alpha.js"
   },
   "dependencies": {
     "@changesets/changelog-github": "^0.4.8",

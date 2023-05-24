@@ -1,27 +1,27 @@
 {
-  "name": "@juriolli/web-components",
-  "version": "0.0.2",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "sideEffects": false,
-  "license": "MIT",
-  "files": [
-    "dist/**"
-  ],
-  "scripts": {
-    "build": "tsup index.ts --format esm,cjs --dts --external react",
-    "dev": "tsup index.ts --format esm,cjs --watch --dts --external react",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
-  },
-  "devDependencies": {
-    "@types/react": "18.0.38",
-    "@types/react-dom": "18.0.11",
-    "react": "^18.2.0",
-    "tsup": "^5.10.1",
-    "typescript": "^5.0.4"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@juriolli/web-components",
+	"version": "0.0.6-test.abc-213.3b750df",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"sideEffects": false,
+	"license": "MIT",
+	"files": [
+		"dist/**"
+	],
+	"scripts": {
+		"build": "tsup index.ts --format esm,cjs --dts --external react",
+		"dev": "tsup index.ts --format esm,cjs --watch --dts --external react",
+		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+	},
+	"devDependencies": {
+		"@types/react": "18.0.38",
+		"@types/react-dom": "18.0.11",
+		"react": "^18.2.0",
+		"tsup": "^5.10.1",
+		"typescript": "^5.0.4"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
 }
