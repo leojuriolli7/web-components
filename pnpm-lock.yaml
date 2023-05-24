@@ -126,7 +126,7 @@ importers:
   examples/nextjs:
     dependencies:
       '@juriolli/web-components':
-        specifier: 0.0.1
+        specifier: 0.0.2
         version: link:../../packages/web-components
       '@types/node':
         specifier: ^18.15.13
