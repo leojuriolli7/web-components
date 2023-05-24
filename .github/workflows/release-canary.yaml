@@ -76,7 +76,7 @@ jobs:
               body: `A new canary is available for testing. You can install this latest build in your project with:
 
               \`\`\`sh
-              pnpm add juriolli@${version} @juriolli/eslint-plugin@version
+              pnpm add juriolli/web-components@${version}
               \`\`\`
               `,
             })
