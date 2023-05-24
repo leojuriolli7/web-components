@@ -6,7 +6,7 @@ const config = {
     tsconfigRootDir: __dirname,
     project: [
       "./examples/*/tsconfig.json",
-      "./packages/*/tsconfig.json",
+      "./src/tsconfig.json",
       "./docs/tsconfig.json",
     ],
   },
@@ -27,6 +27,7 @@ const config = {
   },
   ignorePatterns: [
     "**/dist/**",
+    "./scripts/*",
     "**/node_modules/**",
     ".eslintrc.cjs",
     "**/config.*",

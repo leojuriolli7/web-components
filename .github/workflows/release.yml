@@ -43,7 +43,7 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm turbo --filter "./packages/*" build
+        run: pnpm turbo --filter ./src build
 
       # Using custom token `MY_GITHUB_TOKEN` with more access to avoid rate limiting
       - name: Create Release
