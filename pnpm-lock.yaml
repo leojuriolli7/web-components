@@ -127,7 +127,7 @@ importers:
     dependencies:
       '@juriolli/web-components':
         specifier: 0.0.1
-        version: link:../../packages/web-components
+        version: link:../../src
       '@types/node':
         specifier: ^18.15.13
         version: 18.15.13
@@ -150,7 +150,7 @@ importers:
         specifier: ^5.0.4
         version: 5.0.4
 
-  packages/web-components:
+  src:
     devDependencies:
       '@types/react':
         specifier: 18.0.38
