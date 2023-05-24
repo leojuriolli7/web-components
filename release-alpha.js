@@ -60,7 +60,6 @@ try {
     };
 
     const newVersion = getNewVersion();
-    console.log("newVersion:", newVersion);
 
     pkg.version = newVersion;
 
