@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- [`3e0f013`](https://github.com/leojuriolli7/web-components/commit/3e0f01339567c9f88250ae9eaac6d4e58a081d04) Thanks [@leojuriolli7](https://github.com/leojuriolli7)! - new alpha script
+
+## 0.0.7
+
+### Patch Changes
+
 - [`7ec1727`](https://github.com/leojuriolli7/web-components/commit/7ec172773ae492b69a1f4afac48a5fab93828f58) Thanks [@leojuriolli7](https://github.com/leojuriolli7)! - add docs
 
 ## 0.0.6
