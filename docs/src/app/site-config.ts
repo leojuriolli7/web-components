@@ -20,10 +20,12 @@ export const siteConfig = {
         {
           title: "Project structure",
           href: "/docs/project-structure",
+          items: [],
         },
         {
           title: "Running the project",
           href: "/docs/running-the-project",
+          items: [],
         },
         {
           title: "Building & releasing",
