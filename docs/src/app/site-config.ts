@@ -1,7 +1,7 @@
 export const siteConfig = {
-  name: "Acme Corp Lib",
+  name: "Web components",
   description:
-    "The perfect starter template for your next TypeScript library. Batteries included powered by PNPM Workspaces, Turborepo, tsup & Changesets.",
+    "Typescript React components library. Batteries included powered by PNPM Workspaces, Turborepo, tsup & Changesets.",
   mainNav: [
     {
       title: "Documentation",

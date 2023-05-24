@@ -1,5 +1,8 @@
-# Acme Corp (Library Edition)
+# Web Components library
 
-Starter template for your next TypeScript library monorepo.
+TypeScript React components library monorepo.
 
-Also functioning as a prisma generator to reduce bundle sizes by a few megabytes
+**TO-DOS:**
+
+- [ ] Implement atomic design
+- [ ] Fast Refresh for nextjs example project with correct paths (@molecules, @atoms, etc.)

@@ -1,3 +1,10 @@
+import { Button, Label } from "@juriolli/web-components";
+
 export default function HomePage() {
-  return <div>TODO</div>;
+  return (
+    <div>
+      <Label>Label test</Label>
+      <Button>Button test</Button>
+    </div>
+  );
 }
