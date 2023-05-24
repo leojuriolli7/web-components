@@ -1,10 +1,7 @@
 import fs from "fs";
 import { exec } from "child_process";
 
-const pkgJsonPaths = [
-  "packages/eslint-plugin/package.json",
-  "packages/generator/package.json",
-];
+const pkgJsonPaths = ["packages/web-components/package.json"];
 
 try {
   exec("git rev-parse --short HEAD", (err, stdout) => {
