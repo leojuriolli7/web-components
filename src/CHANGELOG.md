@@ -1,5 +1,11 @@
 # @juriolli/web-components
 
+## 0.0.7
+
+### Patch Changes
+
+- [`7ec1727`](https://github.com/leojuriolli7/web-components/commit/7ec172773ae492b69a1f4afac48a5fab93828f58) Thanks [@leojuriolli7](https://github.com/leojuriolli7)! - add docs
+
 ## 0.0.6
 
 ### Patch Changes
