@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@atoms/*": ["packages/web-components/src/atoms/*"],
+      "@atoms": ["packages/web-components/src/atoms/index.ts"]
+    }
+  }
+}

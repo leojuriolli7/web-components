@@ -1,4 +1,4 @@
-import { Button, Label } from "@juriolli/web-components";
+import { Button, Label } from "@atoms";
 
 export default function HomePage() {
   return (
