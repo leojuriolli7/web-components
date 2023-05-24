@@ -10,7 +10,7 @@ export const siteConfig = {
   ],
   sidebarNav: [
     {
-      title: "Monorepo Setup",
+      title: "Guides",
       items: [
         {
           title: "Introduction",
@@ -18,23 +18,16 @@ export const siteConfig = {
           items: [],
         },
         {
-          title: "Release",
+          title: "Project structure",
+          href: "/docs/project-structure",
+        },
+        {
+          title: "Running the project",
+          href: "/docs/running-the-project",
+        },
+        {
+          title: "Building & releasing",
           href: "/docs/release",
-          items: [],
-        },
-      ],
-    },
-    {
-      title: "Prisma Generator",
-      items: [
-        {
-          title: "Generator",
-          href: "/docs/generator",
-          items: [],
-        },
-        {
-          title: "Eslint Plugin",
-          href: "/docs/eslint",
           items: [],
         },
       ],

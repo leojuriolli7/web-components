@@ -5,11 +5,16 @@ import { exec } from "child_process";
  * This script is used to release an alpha version of the
  * web-components library with a custom tag.
  *
+ * `pnpm release:alpha --tag=<tag name>`
+ *
  * It will:
  * 1. Update the version in package.json to a new alpha version.
  * 2. Build the library.
  * 3. Publish the library to npm with the specified tag.
  */
+
+// TO-DO: Proper versioning on alpha and subsequent alpha releases.
+// Alpha releases are overwriting patch changes (0.0.2 -> (...alphas) -> 0.0.6)
 
 const pkgJsonPath = "src/package.json";
 

@@ -1,0 +1,31 @@
+# File structure
+
+```bash title="Project root folder"
+|  ├── .github
+|  |  └── workflows     // Github automations & workflow.
+|  ├── docs             // Docs website written in Next.js.
+|  ├── examples
+|  |  └── nextjs        // Next.js example folder.
+|  |                    // Here you can test your changes.
+|  |
+|  ├── src              // Library code: Components, utils, hooks.
+|  |  ├── atoms
+|  |  ├── molecules
+|  |  ├── organisms
+|  |  ├── templates
+|  |  ├── pages
+|  |  ├── hooks
+|  |  ├── utils
+|  |  ├── assets
+|  |  └── ...
+|  └── ...
+|
+├── release-alpha.js    // Script for releasing alpha versions.
+└── ...
+```
+
+The project has 3 main folders:
+
+1. docs: The documentation website.
+2. examples: Next.js example project for testing and debugging the library.
+3. src: The library code. This folder is organized with the [atomic design methodology](https://atomicdesign.bradfrost.com/).

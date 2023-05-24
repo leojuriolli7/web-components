@@ -1,11 +1,31 @@
-# Release
+# Workflow
 
-<Callout>TODO</Callout>
+1. Create branch from main, apply your changes.
+2. Commit your changes, open PR, wait for review.
+3. When the PR is approved, run `pnpm changeset` to generate your changelog, commit the changelog.
+4. Merge the PR to main and a Github Action will run opening a PR with the release changes.
+5. Merge the PR to release the new stable version.
 
-## Release Flow
+## Releasing alpha version
 
-...
+To release an alpha version:
 
-## Canary Releases
+```sh
+  pnpm release:alpha --tag=<tag-name>
 
-...
+  ## Example:
+  pnpm release:alpha --tag=bugfix-234
+```
+
+<Callout>
+  You do not need to specify a version bump on the tag flag, the version will
+  automatically be bumped with each alpha release. eg:
+
+```sh
+pnpm release:alpha --tag=bugfix-234 ## Result:  0.0.5-bugfix-234.0
+
+## Next release:
+pnpm release:alpha --tag=bugfix-234 ## Result:  0.0.5-bugfix-234.1
+```
+
+</Callout>

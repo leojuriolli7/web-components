@@ -40,6 +40,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       );
     },
     ul: (props) => <ul className="mt-4 list-disc pl-8" {...props} />,
+    ol: (props) => <ol className="mt-4 list-decimal pl-8" {...props} />,
     blockquote: (props) => (
       <blockquote className="mt-4 pl-4 border-l-4" {...props} />
     ),
