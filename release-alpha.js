@@ -13,9 +13,6 @@ import { exec } from "child_process";
  * 3. Publish the library to npm with the specified tag.
  */
 
-// TO-DO: Proper versioning on alpha and subsequent alpha releases.
-// Alpha releases are overwriting patch changes (0.0.2 -> (...alphas) -> 0.0.6)
-
 const pkgJsonPath = "src/package.json";
 
 const usage = () => {
@@ -46,9 +43,24 @@ try {
 
     const patchValue = patch.split("-")[0];
 
-    const newVersion = `${Number(major)}.${Number(minor)}.${
-      Number(patchValue) + 1
-    }-${tagName}.${commitHash}`;
+    // check if string ends in `<tag-name>.<numbers>`.
+    const pattern = new RegExp(tagName + "\\.\\d+$");
+
+    const getNewVersion = () => {
+      const semver = `${major}.${minor}.${patch}`;
+      const alpha = `${semver}-${tagName}`;
+      const oldVersionIsAlpha = oldVersion.match(pattern);
+
+      if (oldVersionIsAlpha) {
+        // increment the alpha version number.
+        return `${alpha}.${Number(match?.[1]) + 1}`;
+      } else {
+        return `${alpha}.0`;
+      }
+    };
+
+    const newVersion = getNewVersion();
+    console.log("newVersion:", newVersion);
 
     pkg.version = newVersion;
 
