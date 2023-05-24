@@ -1,5 +1,11 @@
 # @juriolli/web-components
 
+## 0.0.6
+
+### Patch Changes
+
+- [#3](https://github.com/leojuriolli7/web-components/pull/3) [`a23af3a`](https://github.com/leojuriolli7/web-components/commit/a23af3a80ac1350067fedb564c385726947d5495) Thanks [@leojuriolli7](https://github.com/leojuriolli7)! - new file structure, alpha script
+
 ## 0.0.2
 
 ### Patch Changes

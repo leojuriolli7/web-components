@@ -1,6 +1,6 @@
 {
 	"name": "@juriolli/web-components",
-	"version": "0.0.6-test.abc-213.3b750df",
+	"version": "0.0.6",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
