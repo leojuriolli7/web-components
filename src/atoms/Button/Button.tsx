@@ -1,8 +1,7 @@
-import type { ReactNode } from "react";
 import * as S from "./styles";
 
 export interface ButtonProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export function Button(props: ButtonProps) {

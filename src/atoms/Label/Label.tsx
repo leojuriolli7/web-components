@@ -1,8 +1,7 @@
-import type { ReactNode } from "react";
 import * as S from "./styles";
 
 export interface LabelProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export function Label(props: LabelProps) {
