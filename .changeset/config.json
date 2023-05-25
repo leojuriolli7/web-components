@@ -9,5 +9,5 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "fixed": [["@juriolli/web-components"]],
-  "ignore": ["@examples/nextjs", "@juriolli/docs"]
+  "ignore": ["@example/nextjs", "@juriolli/docs"]
 }

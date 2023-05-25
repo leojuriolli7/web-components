@@ -5,7 +5,7 @@ const config = {
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: [
-      "./examples/*/tsconfig.json",
+      "./example/*/tsconfig.json",
       "./src/tsconfig.json",
       "./docs/tsconfig.json",
     ],

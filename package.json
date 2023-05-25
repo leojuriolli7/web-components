@@ -10,7 +10,7 @@
     "lint:fix": "turbo lint -- --fix && manypkg fix",
     "test": "turbo test",
     "typecheck": "turbo typecheck",
-    "run:playground": "pnpm -C examples/nextjs dev",
+    "run:playground": "pnpm -C example/nextjs dev",
     "run:docs": "pnpm -C docs/ dev",
     "release:alpha": "node release-alpha.ts"
   },
