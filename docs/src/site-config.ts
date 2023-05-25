@@ -33,6 +33,16 @@ export const siteConfig = {
           items: []
         }
       ]
+    },
+    {
+      title: 'Components',
+      items: [
+        {
+          title: 'Button',
+          href: '/docs/components/button',
+          items: []
+        }
+      ]
     }
   ],
   links: {

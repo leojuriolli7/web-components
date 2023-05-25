@@ -40,6 +40,9 @@ importers:
 
   docs:
     dependencies:
+      '@juriolli/web-components':
+        specifier: 0.0.9
+        version: link:../src
       '@mdx-js/loader':
         specifier: ^2.3.0
         version: 2.3.0(webpack@5.82.0)
@@ -52,6 +55,9 @@ importers:
       '@radix-ui/react-scroll-area':
         specifier: ^1.0.3
         version: 1.0.3(react-dom@18.2.0)(react@18.2.0)
+      '@types/styled-components':
+        specifier: ^5.1.26
+        version: 5.1.26
       class-variance-authority:
         specifier: ^0.4.0
         version: 0.4.0(typescript@5.0.4)
@@ -85,12 +91,18 @@ importers:
       shiki:
         specifier: ^0.14.1
         version: 0.14.1
+      styled-components:
+        specifier: ^5.3.5
+        version: 5.3.5(react-dom@18.2.0)(react-is@17.0.2)(react@18.2.0)
       tailwind-merge:
         specifier: ^1.12.0
         version: 1.12.0
       tailwindcss-animate:
         specifier: ^1.0.5
         version: 1.0.5(tailwindcss@3.3.1)
+      url-loader:
+        specifier: ^4.1.1
+        version: 4.1.1(webpack@5.82.0)
     devDependencies:
       '@types/mdx':
         specifier: ^2.0.5

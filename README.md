@@ -22,7 +22,7 @@ TypeScript React components library monorepo.
 **Step 3:**
 
 - [x] Add Prettier
-- [ ] Port over all atoms, add storybook for `Text` component.
+- [ ] Port over all atoms, add docs for `Text` & `Button` components, add library theme docs. (colors & fonts) [For reference.](https://628d031b55e942004ac95df1-xwtlkiyzgj.chromatic.com/)
 
 **Step 4:**
 

@@ -8,10 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@juriolli/web-components": "0.0.9",
     "@mdx-js/loader": "^2.3.0",
     "@next/mdx": "^13.4.1",
     "@radix-ui/react-popover": "^1.0.5",
     "@radix-ui/react-scroll-area": "^1.0.3",
+    "@types/styled-components": "^5.1.26",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "lucide-react": "0.176.0",
@@ -23,8 +25,10 @@
     "rehype-pretty-code": "^0.9.5",
     "sharp": "^0.31.3",
     "shiki": "^0.14.1",
+    "styled-components": "^5.3.5",
     "tailwind-merge": "^1.12.0",
-    "tailwindcss-animate": "^1.0.5"
+    "tailwindcss-animate": "^1.0.5",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "@types/mdx": "^2.0.5",
