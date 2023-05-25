@@ -3,7 +3,7 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
   darkMode: ["class"],
-  content: ["src/**/*.{ts,tsx,mdx}", "./mdx-components.tsx"],
+  content: ["./src/**/*.{ts,tsx,mdx}", "./mdx-components.tsx"],
   theme: {
     container: {
       center: true,
@@ -57,9 +57,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        cal: ["var(--font-cal)", ...fontFamily.sans],
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-        mono: ["var(--font-mono)", ...fontFamily.mono],
+        cal: ["Cal Sans", ...fontFamily.sans],
+        sans: ["Inter", ...fontFamily.sans],
+        mono: ["JetBrains Mono", ...fontFamily.mono],
       },
       keyframes: {
         "fade-up": {

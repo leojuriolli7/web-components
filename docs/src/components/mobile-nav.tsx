@@ -13,13 +13,14 @@ import { NestedNavItem } from "./sidebar";
 import { PopoverClose } from "@radix-ui/react-popover";
 import { cn } from "@/lib/cn";
 import { Icons } from "./icons";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 export function MobileDropdown(props: {
   items: { main: NavItem[]; docs: NestedNavItem[] };
 }) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const pathname = usePathname();
+  const router = useRouter();
+  const pathname = router.pathname;
 
   React.useEffect(() => {
     if (isOpen) {
@@ -50,19 +51,23 @@ export function MobileDropdown(props: {
                     {item.href ? (
                       <Link
                         href={item.href}
-                        className={cn(
-                          "flex py-1 text-base font-medium text-muted-foreground transition-colors hover:text-primary",
-                          item.href === pathname && "text-foreground"
-                        )}
+                        passHref
                         target={item.external ? "_blank" : ""}
                         rel={item.external ? "noreferrer" : ""}
                       >
-                        {item.title}
-                        {item.label && (
-                          <span className="ml-2 rounded-md bg-teal-100 px-1.5 py-0.5 text-xs no-underline group-hover:no-underline dark:bg-teal-600">
-                            {item.label}
-                          </span>
-                        )}
+                        <a
+                          className={cn(
+                            "flex py-1 text-base font-medium text-muted-foreground transition-colors hover:text-primary",
+                            item.href === pathname && "text-foreground"
+                          )}
+                        >
+                          {item.title}
+                          {item.label && (
+                            <span className="ml-2 rounded-md bg-teal-100 px-1.5 py-0.5 text-xs no-underline group-hover:no-underline dark:bg-teal-600">
+                              {item.label}
+                            </span>
+                          )}
+                        </a>
                       </Link>
                     ) : (
                       item.title

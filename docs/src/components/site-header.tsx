@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { siteConfig } from "@/app/site-config";
+import { siteConfig } from "@/site-config";
 import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import { MainNav } from "@/components/main-nav";
@@ -11,12 +11,11 @@ export function SiteHeader() {
   return (
     <header className="bg-background sticky top-0 z-50 w-full border-b">
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-        <Link
-          href="/"
-          className="items-center space-x-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring ring-offset-background flex h-9 mr-3 px-3"
-        >
-          <Icons.logo className="h-6 w-6" />
-          <span className="font-bold text-lg">{siteConfig.name}</span>
+        <Link href="/" passHref>
+          <a className="items-center space-x-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring ring-offset-background flex h-9 mr-3 px-3">
+            <Icons.logo className="h-6 w-6" />
+            <span className="font-bold text-lg">{siteConfig.name}</span>
+          </a>
         </Link>
 
         <MainNav items={siteConfig.mainNav} />
@@ -24,6 +23,7 @@ export function SiteHeader() {
           <nav className="flex items-center space-x-1">
             <Link
               href={siteConfig.links.github}
+              passHref
               target="_blank"
               rel="noreferrer"
               className={buttonVariants({
@@ -31,8 +31,9 @@ export function SiteHeader() {
                 variant: "ghost",
               })}
             >
-              <Icons.gitHub className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
+              <a>
+                <Icons.gitHub className="h-5 w-5" />
+              </a>
             </Link>
             <ThemeToggle />
             <MobileDropdown

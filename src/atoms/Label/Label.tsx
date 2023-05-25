@@ -1,11 +1,11 @@
-import * as React from "react";
+import * as S from "./styles";
 
 export interface LabelProps {
   children: React.ReactNode;
 }
 
 export function Label(props: LabelProps) {
-  return <label>{props.children}</label>;
+  return <S.Label>{props.children}</S.Label>;
 }
 
 Label.displayName = "Label";

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Cal Sans";
+  src: local("Cal Sans"), url("./calsans.ttf") format("truetype");
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

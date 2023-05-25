@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 import { cn } from "@/lib/cn";
 import { NavItem } from "./main-nav";
@@ -11,7 +11,8 @@ export interface NestedNavItem extends NavItem {
 }
 
 export function DocsSidebarNav(props: { items: NestedNavItem[] }) {
-  const pathname = usePathname();
+  const router = useRouter();
+  const pathname = router.pathname;
 
   return props.items.length ? (
     <div className="w-full px-2">
@@ -40,23 +41,27 @@ export function DocsSidebarNavItems(props: {
           <Link
             key={index}
             href={item.href}
-            className={cn(
-              "group flex w-full items-center rounded-md border border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ringfocus-visible:outline-none focus-visible:ring-ring ring-offset-background h-9 px-3",
-              item.disabled && "cursor-not-allowed opacity-60",
-              {
-                "font-medium bg-accent border-border text-accent-foreground":
-                  props.pathname === item.href,
-              }
-            )}
             target={item.external ? "_blank" : ""}
             rel={item.external ? "noreferrer" : ""}
+            passHref
           >
-            {item.title}
-            {item.label && (
-              <span className="ml-2 rounded-md bg-teal-100 px-1.5 py-0.5 text-xs no-underline group-hover:no-underline dark:bg-teal-600">
-                {item.label}
-              </span>
-            )}
+            <a
+              className={cn(
+                "group flex w-full items-center rounded-md border border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ringfocus-visible:outline-none focus-visible:ring-ring ring-offset-background h-9 px-3",
+                item.disabled && "cursor-not-allowed opacity-60",
+                {
+                  "font-medium bg-accent border-border text-accent-foreground":
+                    props.pathname === item.href,
+                }
+              )}
+            >
+              {item.title}
+              {item.label && (
+                <span className="ml-2 rounded-md bg-teal-100 px-1.5 py-0.5 text-xs no-underline group-hover:no-underline dark:bg-teal-600">
+                  {item.label}
+                </span>
+              )}
+            </a>
           </Link>
         ) : (
           <span

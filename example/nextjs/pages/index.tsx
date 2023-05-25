@@ -3,8 +3,8 @@ import { Button, Label } from "@atoms";
 export default function HomePage() {
   return (
     <div>
-      <Label>Label test</Label>
-      <Button>Button test</Button>
+      <Label>Label</Label>
+      <Button>Submit</Button>
     </div>
   );
 }
