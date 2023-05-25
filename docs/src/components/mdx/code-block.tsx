@@ -48,7 +48,7 @@ export function Codeblock(props: CodeblockProps) {
           void window.navigator.clipboard.writeText(ref.current.innerText);
           setTimeout(() => setCopied(false), 1500);
         }}
-        className="absolute right-2 top-[10px] z-20 h-8 w-8 cursor-pointer rounded text-muted-foreground hover:bg-muted"
+        className="absolute right-2 top-[10px] z-20 h-8 w-8 cursor-pointer rounded text-muted-foreground bg-slate-100 dark:bg-slate-800 hover:bg-muted"
       >
         <div className="relative p-1 w-full h-full">
           <Copy

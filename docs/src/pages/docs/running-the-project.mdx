@@ -2,9 +2,9 @@
 
 <Steps>
 
-### Node version
+### Use Node 16
 
-Make sure your node version is up-to-date. It should be at least Node 16.14.0:
+Make sure your node version is up-to-date. It should be at least **Node 16.14.0:**
 
 ```sh
   ## Check your node version:
@@ -15,7 +15,17 @@ Make sure your node version is up-to-date. It should be at least Node 16.14.0:
   nvm use v16
 ```
 
+### Install pnpm
+
+If you don't already have pnpm installed, you can install it with:
+
+```bash
+npm install -g pnpm
+```
+
 ### Install dependencies
+
+This command installs all dependencies for all projects (Example folder, docs folder, root folder & components library folder)
 
 ```sh
 pnpm i
@@ -34,3 +44,17 @@ pnpm run:docs
 ```
 
 </Steps>
+
+### Additional commands
+
+Delete lib node_modules & build:
+
+```bash
+pnpm clean
+```
+
+Check for Typescript type errors on the whole project:
+
+```bash
+pnpm typecheck
+```

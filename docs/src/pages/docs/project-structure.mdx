@@ -29,7 +29,7 @@
 1. **docs**: The documentation website. Built with Next.js 12, tailwind css and MDX.
 2. **example/nextjs**: Next.js example project for testing and debugging the library. you can import any exported component from the library:
 
-```tsx title="example/nextjs/app/page.tsx"
+```tsx title="example/nextjs/pages/index.tsx"
 import { Button, Label } from "@atoms";
 
 export default function Page() {
@@ -43,3 +43,42 @@ export default function Page() {
 ```
 
 3. **src**: The library source code. This folder is organized with the [atomic design methodology](https://atomicdesign.bradfrost.com/).
+
+The atomic design methodology encourages developers to think in terms of a component hierarchy that resembles the structure of an atom. This hierarchy consists of five distinct levels: atoms, molecules, organisms, templates, and pages.
+
+1. **Atoms:** Atoms are the basic building blocks of the UI. They represent the smallest and most fundamental elements, such as buttons, input fields, icons, and typography styles. Atoms are typically stateless and reusable across multiple components.
+
+2. **Molecules:** Molecules are formed by combining multiple atoms together to create more complex and cohesive components. Examples of molecules include a search bar consisting of an input field and a button, or a navigation menu composed of multiple buttons.
+
+3. **Organisms:** Organisms are higher-level components that are composed of molecules and atoms. They represent discrete sections of the UI that serve a specific purpose, such as a header, sidebar, or a form. Organisms can contain multiple instances of molecules and atoms and may also have their own state and logic.
+
+4. **Templates:** Templates define the overall layout and structure of a page or a section of the application. They combine multiple organisms to create a cohesive visual and functional design. Templates establish the wireframe for specific pages and serve as a blueprint for their content and component placement.
+
+5. **Pages:** Pages are the final stage in the atomic design hierarchy. They are specific instances of templates that represent complete screens or views of the application. Pages bring together all the necessary components and data to provide a fully functional and interactive user experience.
+
+The atomic design methodology promotes reusability by encouraging the creation of small, modular components that can be easily combined and reused throughout the application. This saves development time and effort and ensures consistency across the UI.
+
+The methodology facilitates scalability and maintainability. Breaking the UI down into smaller components makes it easier to manage and update specific parts of the application without impacting the entire codebase. It also enables parallel development, as different team members can work on different components simultaneously.
+
+Lastly, the atomic design methodology promotes a more systematic and organized approach to UI development. The component hierarchy provides a clear structure that helps developers understand how different parts of the application fit together. It also fosters better collaboration between designers and developers by establishing a shared vocabulary and design system.
+
+#### Other folders:
+
+1. `/utils`: Any utility functions. eg:
+
+```ts title="src/utils/normalizeURL"
+const normalizeURL = (url) =>
+  !/http(?:s)?\:\/\//g.test(url) ? `https://${url?.trim()}`.toLowerCase() : url;
+
+export default normalizeURL;
+```
+
+2. `/providers`: Providers such as a theme provider, history provider and permissions provider.
+
+3. `/state`: All our global state stores are located here. We store global state with [Zustand.](https://github.com/pmndrs/zustand)
+
+4. `/hooks`: All our utility hooks that are used throughout the application.
+
+5. `/config`: Configuration files.
+
+6. `/styles`: Project styles, such as global styling and the theme definition.
