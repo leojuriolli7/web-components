@@ -1,5 +1,11 @@
 # @juriolli/web-components
 
+## 0.0.9
+
+### Patch Changes
+
+- [`342878f`](https://github.com/leojuriolli7/web-components/commit/342878fa611af431db2bb96fdd4c489df04a8018) Thanks [@leojuriolli7](https://github.com/leojuriolli7)! - next 12, styled components, react-shim.js
+
 ## 0.0.8
 
 ### Patch Changes
