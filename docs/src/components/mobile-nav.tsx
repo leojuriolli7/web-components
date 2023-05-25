@@ -1,34 +1,34 @@
-"use client";
+'use client'
 
-import * as React from "react";
-import Link from "next/link";
+import * as React from 'react'
+import Link from 'next/link'
 
-import { Button } from "./ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-import { ScrollArea } from "./ui/scroll-area";
+import { Button } from './ui/button'
+import { Popover, PopoverContent, PopoverTrigger } from './ui/popover'
+import { ScrollArea } from './ui/scroll-area'
 
-import { ThemeToggle } from "./theme-toggle";
-import { NavItem } from "./main-nav";
-import { NestedNavItem } from "./sidebar";
-import { PopoverClose } from "@radix-ui/react-popover";
-import { cn } from "@/lib/cn";
-import { Icons } from "./icons";
-import { useRouter } from "next/router";
+import { ThemeToggle } from './theme-toggle'
+import { NavItem } from './main-nav'
+import { NestedNavItem } from './sidebar'
+import { PopoverClose } from '@radix-ui/react-popover'
+import { cn } from '@/lib/cn'
+import { Icons } from './icons'
+import { useRouter } from 'next/router'
 
 export function MobileDropdown(props: {
-  items: { main: NavItem[]; docs: NestedNavItem[] };
+  items: { main: NavItem[]; docs: NestedNavItem[] }
 }) {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const router = useRouter();
-  const pathname = router.pathname;
+  const [isOpen, setIsOpen] = React.useState(false)
+  const router = useRouter()
+  const pathname = router.pathname
 
   React.useEffect(() => {
     if (isOpen) {
-      document.body.classList.add("overflow-hidden");
+      document.body.classList.add('overflow-hidden')
     } else {
-      document.body.classList.remove("overflow-hidden");
+      document.body.classList.remove('overflow-hidden')
     }
-  }, [isOpen]);
+  }, [isOpen])
 
   return (
     <Popover open={isOpen} onOpenChange={setIsOpen}>
@@ -37,7 +37,7 @@ export function MobileDropdown(props: {
           variant="ghost"
           className="mr-2 px-0 hamburger space-x-2 hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
         >
-          <Icons.menu className={cn("h-6 w-6", isOpen && "open")} />
+          <Icons.menu className={cn('h-6 w-6', isOpen && 'open')} />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="z-40 mt-2 h-[calc(100vh-4rem)] w-screen bg-background animate-none rounded-none border-none transition-transform md:hidden">
@@ -52,13 +52,13 @@ export function MobileDropdown(props: {
                       <Link
                         href={item.href}
                         passHref
-                        target={item.external ? "_blank" : ""}
-                        rel={item.external ? "noreferrer" : ""}
+                        target={item.external ? '_blank' : ''}
+                        rel={item.external ? 'noreferrer' : ''}
                       >
                         <a
                           className={cn(
-                            "flex py-1 text-base font-medium text-muted-foreground transition-colors hover:text-primary",
-                            item.href === pathname && "text-foreground"
+                            'flex py-1 text-base font-medium text-muted-foreground transition-colors hover:text-primary',
+                            item.href === pathname && 'text-foreground'
                           )}
                         >
                           {item.title}
@@ -82,5 +82,5 @@ export function MobileDropdown(props: {
         </div>
       </PopoverContent>
     </Popover>
-  );
+  )
 }

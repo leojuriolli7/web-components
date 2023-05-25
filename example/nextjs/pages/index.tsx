@@ -1,4 +1,4 @@
-import { Button, Label } from "@atoms";
+import { Button, Label } from '@atoms'
 
 export default function HomePage() {
   return (
@@ -6,5 +6,5 @@ export default function HomePage() {
       <Label>Label</Label>
       <Button>Submit</Button>
     </div>
-  );
+  )
 }

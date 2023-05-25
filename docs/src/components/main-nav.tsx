@@ -1,24 +1,24 @@
-"use client";
+'use client'
 
-import * as React from "react";
-import Link from "next/link";
+import * as React from 'react'
+import Link from 'next/link'
 
-import { cn } from "@/lib/cn";
-import { Icons } from "@/components/icons";
-import { useRouter } from "next/router";
+import { cn } from '@/lib/cn'
+import { Icons } from '@/components/icons'
+import { useRouter } from 'next/router'
 
 export interface NavItem {
-  title: string;
-  href?: string;
-  disabled?: boolean;
-  external?: boolean;
-  icon?: keyof typeof Icons;
-  label?: string;
+  title: string
+  href?: string
+  disabled?: boolean
+  external?: boolean
+  icon?: keyof typeof Icons
+  label?: string
 }
 
 export function MainNav(props: { items: NavItem[] }) {
-  const router = useRouter();
-  const pathname = router.pathname;
+  const router = useRouter()
+  const pathname = router.pathname
 
   return (
     <div className="flex gap-6 md:gap-10">
@@ -30,9 +30,9 @@ export function MainNav(props: { items: NavItem[] }) {
                 <Link key={index} href={item.href}>
                   <a
                     className={cn(
-                      "text-muted-foreground flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground h-9 px-3",
-                      item.disabled && "cursor-not-allowed opacity-80",
-                      item.href === pathname && "text-foreground"
+                      'text-muted-foreground flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground h-9 px-3',
+                      item.disabled && 'cursor-not-allowed opacity-80',
+                      item.href === pathname && 'text-foreground'
                     )}
                   >
                     {item.title}
@@ -43,5 +43,5 @@ export function MainNav(props: { items: NavItem[] }) {
         </nav>
       ) : null}
     </div>
-  );
+  )
 }

@@ -5,10 +5,10 @@ import {
   Twitter,
   type Icon as LucideIcon,
   TerminalSquare,
-  Command,
-} from "lucide-react";
+  Command
+} from 'lucide-react'
 
-export type Icon = LucideIcon;
+export type Icon = LucideIcon
 
 export const Icons = {
   sun: SunMedium,
@@ -95,5 +95,5 @@ export const Icons = {
         />
       </g>
     </svg>
-  ),
-};
+  )
+}

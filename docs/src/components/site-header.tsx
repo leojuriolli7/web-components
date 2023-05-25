@@ -1,11 +1,11 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-import { siteConfig } from "@/site-config";
-import { buttonVariants } from "@/components/ui/button";
-import { Icons } from "@/components/icons";
-import { MainNav } from "@/components/main-nav";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { MobileDropdown } from "@/components/mobile-nav";
+import { siteConfig } from '@/site-config'
+import { buttonVariants } from '@/components/ui/button'
+import { Icons } from '@/components/icons'
+import { MainNav } from '@/components/main-nav'
+import { ThemeToggle } from '@/components/theme-toggle'
+import { MobileDropdown } from '@/components/mobile-nav'
 
 export function SiteHeader() {
   return (
@@ -29,8 +29,8 @@ export function SiteHeader() {
               target="_blank"
               rel="noreferrer"
               className={buttonVariants({
-                size: "sm",
-                variant: "ghost",
+                size: 'sm',
+                variant: 'ghost'
               })}
             >
               <a>
@@ -45,5 +45,5 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  );
+  )
 }

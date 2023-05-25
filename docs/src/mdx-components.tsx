@@ -1,9 +1,9 @@
-import * as React from "react";
-import Link from "next/link";
-import type { MDXComponents } from "mdx/types";
+import * as React from 'react'
+import Link from 'next/link'
+import type { MDXComponents } from 'mdx/types'
 
-import { Callout } from "@/components/mdx/callout";
-import { Codeblock } from "@/components/mdx/code-block";
+import { Callout } from '@/components/mdx/callout'
+import { Codeblock } from '@/components/mdx/code-block'
 
 // This file is required to use MDX in `app` directory.
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -28,8 +28,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <p className="leading-7 [&:not(:first-child)]:mt-6" {...props} />
     ),
     a: ({ children, href }) => {
-      const isExternal = href?.startsWith("http");
-      const Component = isExternal ? "a" : Link;
+      const isExternal = href?.startsWith('http')
+      const Component = isExternal ? 'a' : Link
       return (
         <Component
           href={href as string}
@@ -37,7 +37,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         >
           {children}
         </Component>
-      );
+      )
     },
     ul: (props) => <ul className="mt-4 list-disc pl-8" {...props} />,
     ol: (props) => <ol className="mt-4 list-decimal pl-8" {...props} />,
@@ -64,6 +64,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
 
     // Pass through all other components.
-    ...components,
-  };
+    ...components
+  }
 }

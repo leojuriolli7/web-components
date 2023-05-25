@@ -1,15 +1,15 @@
-import { SiteHeader } from "@/components/site-header";
-import { TailwindIndicator } from "@/components/tailwind-indicator";
-import { ThemeProvider } from "@/components/theme-provider";
-import { AppProps } from "next/app";
-import DocsLayout from "@/components/docs-layout";
-import Head from "next/head";
-import { siteConfig } from "@/site-config";
-import { baseUrl } from "@/lib/baseUrl";
-import "@/styles/globals.css";
+import { SiteHeader } from '@/components/site-header'
+import { TailwindIndicator } from '@/components/tailwind-indicator'
+import { ThemeProvider } from '@/components/theme-provider'
+import { AppProps } from 'next/app'
+import DocsLayout from '@/components/docs-layout'
+import Head from 'next/head'
+import { siteConfig } from '@/site-config'
+import { baseUrl } from '@/lib/baseUrl'
+import '@/styles/globals.css'
 
 function App({ Component, pageProps, router }: AppProps) {
-  const isDocsRoute = router.pathname.startsWith("/docs");
+  const isDocsRoute = router.pathname.startsWith('/docs')
 
   return (
     <>
@@ -49,7 +49,7 @@ function App({ Component, pageProps, router }: AppProps) {
         <TailwindIndicator />
       </ThemeProvider>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

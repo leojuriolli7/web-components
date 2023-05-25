@@ -21,5 +21,10 @@ TypeScript React components library monorepo.
 
 **Step 3:**
 
-- [ ] Start porting components and dependencies over for testing.
-- [ ] Github Action PR (Publish changes without opening new PR)
+- [x] Add Prettier
+- [ ] Port over all atoms, add storybook for `Text` component.
+
+**Step 4:**
+
+- [ ] Port other components and dependencies over.
+- [ ] Refactor Github Action PR (Publish changes without opening new PR)

@@ -1,13 +1,13 @@
-import * as S from "./styles";
+import * as S from './styles'
 
 export interface ButtonProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export function Button(props: ButtonProps) {
-  const onButtonClick = () => console.log("clicked");
+  const onButtonClick = () => console.log('clicked')
 
-  return <S.Button onClick={onButtonClick}>{props.children}</S.Button>;
+  return <S.Button onClick={onButtonClick}>{props.children}</S.Button>
 }
 
-Button.displayName = "Button";
+Button.displayName = 'Button'

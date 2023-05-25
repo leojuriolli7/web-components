@@ -1,34 +1,34 @@
-"use client";
+'use client'
 
-import { useRef, useState } from "react";
-import { CheckCheck, Copy } from "lucide-react";
-import { Icons } from "../icons";
-import { cn } from "@/lib/cn";
+import { useRef, useState } from 'react'
+import { CheckCheck, Copy } from 'lucide-react'
+import { Icons } from '../icons'
+import { cn } from '@/lib/cn'
 
 export type CodeblockProps = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLPreElement>,
   HTMLPreElement
 > & {
   /** set by `rehype-pretty-code` */
-  "data-language"?: string;
+  'data-language'?: string
   /** set by `rehype-pretty-code` */
-  "data-theme"?: string;
-};
+  'data-theme'?: string
+}
 
 export function Codeblock(props: CodeblockProps) {
-  const { children, ...rest } = props;
-  const language = props["data-language"] as string;
-  const theme = props["data-theme"] as string;
+  const { children, ...rest } = props
+  const language = props['data-language'] as string
+  const theme = props['data-theme'] as string
   const Icon = {
     js: Icons.javascript,
     ts: Icons.typescript,
     tsx: Icons.typescript,
     prisma: Icons.prisma,
-    bash: Icons.bash,
-  }[language];
+    bash: Icons.bash
+  }[language]
 
-  const ref = useRef<HTMLPreElement>(null);
-  const [copied, setCopied] = useState(false);
+  const ref = useRef<HTMLPreElement>(null)
+  const [copied, setCopied] = useState(false)
 
   return (
     <>
@@ -43,24 +43,24 @@ export function Codeblock(props: CodeblockProps) {
         aria-label="Copy to Clipboard"
         data-theme={theme}
         onClick={() => {
-          if (typeof window === "undefined" || !ref.current) return;
-          setCopied(true);
-          void window.navigator.clipboard.writeText(ref.current.innerText);
-          setTimeout(() => setCopied(false), 1500);
+          if (typeof window === 'undefined' || !ref.current) return
+          setCopied(true)
+          void window.navigator.clipboard.writeText(ref.current.innerText)
+          setTimeout(() => setCopied(false), 1500)
         }}
         className="absolute right-2 top-[10px] z-20 h-8 w-8 cursor-pointer rounded text-muted-foreground bg-slate-100 dark:bg-slate-800 hover:bg-muted"
       >
         <div className="relative p-1 w-full h-full">
           <Copy
             className={cn(
-              "absolute h-6 w-6 p-0 transition-all",
-              copied && "scale-0"
+              'absolute h-6 w-6 p-0 transition-all',
+              copied && 'scale-0'
             )}
           />
           <CheckCheck
             className={cn(
-              "absolute h-6 w-6 scale-0 p-0 transition-all",
-              copied && "scale-100"
+              'absolute h-6 w-6 scale-0 p-0 transition-all',
+              copied && 'scale-100'
             )}
           />
         </div>
@@ -73,5 +73,5 @@ export function Codeblock(props: CodeblockProps) {
         {children}
       </pre>
     </>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import fs from "fs";
-import { exec } from "child_process";
+import fs from 'fs'
+import { exec } from 'child_process'
 
 /**
  * This script is used to release an alpha version of the
@@ -13,79 +13,79 @@ import { exec } from "child_process";
  * 3. Publish the library to npm with the specified tag.
  */
 
-const pkgJsonPath = "src/package.json";
+const pkgJsonPath = 'src/package.json'
 
 const usage = () => {
   console.log(
-    "Please supply a tag name. Usage: `pnpm release:alpha --tag=<tag name>`"
-  );
+    'Please supply a tag name. Usage: `pnpm release:alpha --tag=<tag name>`'
+  )
 
-  process.exit(1);
-};
+  process.exit(1)
+}
 
-const tagName = process?.argv?.[2]?.split("=")?.[1];
+const tagName = process?.argv?.[2]?.split('=')?.[1]
 
 try {
   if (!tagName) {
-    usage();
+    usage()
   }
 
-  const pkg = JSON.parse(fs.readFileSync(pkgJsonPath, "utf-8"));
-  const oldVersion = pkg.version;
-  const [major, minor, third] = oldVersion.split(".");
-  const patch = third.split("-")[0];
+  const pkg = JSON.parse(fs.readFileSync(pkgJsonPath, 'utf-8'))
+  const oldVersion = pkg.version
+  const [major, minor, third] = oldVersion.split('.')
+  const patch = third.split('-')[0]
 
   // check if string ends in `<tag-name>.<numbers>`.
-  const pattern = new RegExp(tagName + "\\.(\\d+)$");
+  const pattern = new RegExp(tagName + '\\.(\\d+)$')
 
   const getNewVersion = () => {
-    const semver = `${major}.${minor}.${patch}`;
-    const alpha = `${semver}-${tagName}`;
-    const oldVersionIsAlpha = oldVersion.match(pattern);
+    const semver = `${major}.${minor}.${patch}`
+    const alpha = `${semver}-${tagName}`
+    const oldVersionIsAlpha = oldVersion.match(pattern)
 
     if (oldVersionIsAlpha) {
       // increment the alpha version number.
-      return `${alpha}.${Number(oldVersionIsAlpha?.[1]) + 1}`;
+      return `${alpha}.${Number(oldVersionIsAlpha?.[1]) + 1}`
     } else {
-      return `${alpha}.0`;
+      return `${alpha}.0`
     }
-  };
+  }
 
-  const newVersion = getNewVersion();
+  const newVersion = getNewVersion()
 
-  pkg.version = newVersion;
+  pkg.version = newVersion
 
-  const content = JSON.stringify(pkg, null, "\t") + "\n";
+  const content = JSON.stringify(pkg, null, '\t') + '\n'
   const newContent = content.replace(
-    new RegExp(`"@juriolli/\\*": "${oldVersion}"`, "g"),
+    new RegExp(`"@juriolli/\\*": "${oldVersion}"`, 'g'),
     `"@juriolli/*": "${newVersion}"`
-  );
+  )
 
-  fs.writeFileSync(pkgJsonPath, newContent);
+  fs.writeFileSync(pkgJsonPath, newContent)
 
-  console.log("Releasing alpha version with tag name:", tagName);
+  console.log('Releasing alpha version with tag name:', tagName)
 
-  exec("pnpm build", (err, stdout) => {
+  exec('pnpm build', (err, stdout) => {
     if (err) {
-      console.log("Build error:", err);
-      process.exit(1);
+      console.log('Build error:', err)
+      process.exit(1)
     }
 
-    console.log(stdout);
+    console.log(stdout)
 
     exec(
       `pnpm publish ./src --access public --tag ${tagName} --no-git-checks`,
       (err, stdout) => {
         if (err) {
-          console.log("Publish error:", err);
-          process.exit(1);
+          console.log('Publish error:', err)
+          process.exit(1)
         }
 
-        console.log(stdout);
+        console.log(stdout)
       }
-    );
-  });
+    )
+  })
 } catch (error) {
-  console.error(error);
-  process.exit(1);
+  console.error(error)
+  process.exit(1)
 }

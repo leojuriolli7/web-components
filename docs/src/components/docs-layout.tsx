@@ -1,7 +1,7 @@
-import { DocsSidebarNav } from "@/components/sidebar";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { siteConfig } from "@/site-config";
-import { ReactNode } from "react";
+import { DocsSidebarNav } from '@/components/sidebar'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import { siteConfig } from '@/site-config'
+import { ReactNode } from 'react'
 
 export default function DocsLayout(props: { children: ReactNode }) {
   return (
@@ -13,5 +13,5 @@ export default function DocsLayout(props: { children: ReactNode }) {
       </aside>
       <main className="pb-16 max-w-3xl">{props.children}</main>
     </div>
-  );
+  )
 }
