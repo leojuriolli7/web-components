@@ -1,5 +1,11 @@
 # @juriolli/web-components
 
+## 0.0.10
+
+### Patch Changes
+
+- [`6488bc0`](https://github.com/leojuriolli7/web-components/commit/6488bc02b9c52bc324811edeba20abc22857d88c) Thanks [@leojuriolli7](https://github.com/leojuriolli7)! - add prettier, format code
+
 ## 0.0.9
 
 ### Patch Changes
