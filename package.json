@@ -12,7 +12,7 @@
     "typecheck": "turbo typecheck",
     "run:playground": "pnpm -C example/nextjs dev",
     "run:docs": "pnpm -C docs/ dev",
-    "release:alpha": "node release-alpha.ts"
+    "release:alpha": "node release-alpha.js"
   },
   "dependencies": {
     "@changesets/changelog-github": "^0.4.8",
