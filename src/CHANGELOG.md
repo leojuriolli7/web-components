@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- [#8](https://github.com/leojuriolli7/web-components/pull/8) [`cd7fa1e`](https://github.com/leojuriolli7/web-components/commit/cd7fa1e6c823737b72baffc02c3819bb111ea7d5) Thanks [@leojuriolli7](https://github.com/leojuriolli7)! - downgrade to next-12, add styled-components, fixes
+
+## 0.0.8
+
+### Patch Changes
+
 - [`7f5d7a6`](https://github.com/leojuriolli7/web-components/commit/7f5d7a6da466bc7c6fcfaa81a7c56f1e190ef75a) Thanks [@leojuriolli7](https://github.com/leojuriolli7)! - typescript script, more docs
 
 ## 0.0.7
