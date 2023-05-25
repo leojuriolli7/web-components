@@ -32,10 +32,11 @@ try {
 
   const pkg = JSON.parse(fs.readFileSync(pkgJsonPath, "utf-8"));
   const oldVersion = pkg.version;
-  const [major, minor, patch] = oldVersion.split(".");
+  const [major, minor, third] = oldVersion.split(".");
+  const patch = third.split("-")[0];
 
   // check if string ends in `<tag-name>.<numbers>`.
-  const pattern = new RegExp(tagName + "\\.\\d+$");
+  const pattern = new RegExp(tagName + "\\.(\\d+)$");
 
   const getNewVersion = () => {
     const semver = `${major}.${minor}.${patch}`;
