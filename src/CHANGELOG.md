@@ -1,5 +1,11 @@
 # @juriolli/web-components
 
+## 0.0.8
+
+### Patch Changes
+
+- [`7f5d7a6`](https://github.com/leojuriolli7/web-components/commit/7f5d7a6da466bc7c6fcfaa81a7c56f1e190ef75a) Thanks [@leojuriolli7](https://github.com/leojuriolli7)! - typescript script, more docs
+
 ## 0.0.7
 
 ### Patch Changes
