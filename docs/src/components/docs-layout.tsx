@@ -1,6 +1,6 @@
 import { DocsSidebarNav } from "@/components/sidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { siteConfig } from "@/app/site-config";
+import { siteConfig } from "@/site-config";
 import { ReactNode } from "react";
 
 export default function DocsLayout(props: { children: ReactNode }) {

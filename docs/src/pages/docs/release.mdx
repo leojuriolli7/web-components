@@ -16,16 +16,16 @@ To release an alpha version, run this command:
 
 ### Example:
 
-Releasing alpha version with tag `bugfix-234`
+Releasing alpha version with tag `bugfix/234`
 
 ```sh
-  pnpm release:alpha --tag=bugfix-234
+  pnpm release:alpha --tag=bugfix/234
 ```
 
 Installing this tag on another project:
 
 ```sh
-  yarn add @juriolli/web-components@bugfix-234
+  yarn add @juriolli/web-components@bugfix/234
 ```
 
 <Callout>
@@ -34,10 +34,10 @@ Installing this tag on another project:
 
 ```sh
 ## First release:
-pnpm release:alpha --tag=bugfix-234 ## Result:  0.0.5-bugfix-234.0
+pnpm release:alpha --tag=bugfix/234 ## Result:  0.0.5-bugfix/234.0
 
 ## Next release:
-pnpm release:alpha --tag=bugfix-234 ## Result:  0.0.5-bugfix-234.1
+pnpm release:alpha --tag=bugfix/234 ## Result:  0.0.5-bugfix/234.1
 ```
 
 </Callout>
