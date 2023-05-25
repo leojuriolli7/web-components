@@ -22,6 +22,11 @@
       }
     ]
   },
-  "include": [".next/types/**/*.ts", "next-env.d.ts", "next.config.mjs", "app"],
+  "include": [
+    ".next/types/**/*.ts",
+    "next-env.d.ts",
+    "next.config.js",
+    "pages"
+  ],
   "exclude": ["node_modules"]
 }

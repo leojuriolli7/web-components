@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-
 import withMdx from "@next/mdx";
 import rehypePrettyCode from "rehype-pretty-code";
 import { getHighlighter } from "shiki";

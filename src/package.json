@@ -1,6 +1,6 @@
 {
   "name": "@juriolli/web-components",
-  "version": "0.0.8",
+  "version": "0.0.8-next-12.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -14,12 +14,23 @@
     "dev": "tsup index.ts --format esm,cjs --watch --dts --external react",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
+  "peerDependencies": {
+    "next": "12.2.5",
+    "react": "^18.2.0",
+    "styled-components": "^5.3.5"
+  },
   "devDependencies": {
     "@types/react": "18.0.38",
     "@types/react-dom": "18.0.11",
+    "@types/styled-components": "^5.1.26",
+    "next": "^12.3.0",
     "react": "^18.2.0",
     "tsup": "^5.10.1",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.5"
   },
   "publishConfig": {
     "access": "public"

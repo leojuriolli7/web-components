@@ -15,5 +15,6 @@ TypeScript React components library monorepo.
 
 **Step 2:**
 
-- [ ] Start matching versions (Next version, React, etc.)
+- [x] Start matching versions (Next version, React, etc.) - Downgraded to next 12, installed styled-components.
+- [ ] Downgrade docs to Next 12.
 - [ ] Start porting components and dependencies over for testing.
