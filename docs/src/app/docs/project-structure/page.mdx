@@ -1,4 +1,4 @@
-# File structure
+# Project structure and layout
 
 ```bash title="Project root folder"
 |  ├── .github
@@ -24,8 +24,22 @@
 └── ...
 ```
 
-The project has 3 main folders:
+**The project has 3 main folders:**
 
-1. docs: The documentation website.
-2. example/nextjs: Next.js example project for testing and debugging the library.
-3. src: The library code. This folder is organized with the [atomic design methodology](https://atomicdesign.bradfrost.com/).
+1. **docs**: The documentation website. Built with Next.js 13, tailwind and MDX.
+2. **example/nextjs**: Next.js example project for testing and debugging the library. you can import any exported component from the library:
+
+```tsx title="example/nextjs/app/page.tsx"
+import { Button, Label } from "@atoms";
+
+export default function Page() {
+  return (
+    <div>
+      <Label>Label test</Label>
+      <Button>Button test</Button>
+    </div>
+  );
+}
+```
+
+3. **src**: The library source code. This folder is organized with the [atomic design methodology](https://atomicdesign.bradfrost.com/).

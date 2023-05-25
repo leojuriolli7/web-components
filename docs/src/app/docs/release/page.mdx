@@ -8,13 +8,24 @@
 
 ## Releasing alpha version
 
-To release an alpha version:
+To release an alpha version, run this command:
 
 ```sh
   pnpm release:alpha --tag=<tag-name>
+```
 
-  ## Example:
+### Example:
+
+Releasing alpha version with tag `bugfix-234`
+
+```sh
   pnpm release:alpha --tag=bugfix-234
+```
+
+Installing this tag on another project:
+
+```sh
+  yarn add @juriolli/web-components@bugfix-234
 ```
 
 <Callout>
@@ -22,6 +33,7 @@ To release an alpha version:
   automatically be bumped with each alpha release. eg:
 
 ```sh
+## First release:
 pnpm release:alpha --tag=bugfix-234 ## Result:  0.0.5-bugfix-234.0
 
 ## Next release:
