@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@juriolli/web-components": "0.0.9",
+    "@juriolli/web-components": "0.0.10",
     "@mdx-js/loader": "^2.3.0",
     "@next/mdx": "^13.4.1",
     "@radix-ui/react-popover": "^1.0.5",

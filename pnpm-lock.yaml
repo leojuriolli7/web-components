@@ -41,7 +41,7 @@ importers:
   docs:
     dependencies:
       '@juriolli/web-components':
-        specifier: 0.0.9
+        specifier: 0.0.10
         version: link:../src
       '@mdx-js/loader':
         specifier: ^2.3.0
