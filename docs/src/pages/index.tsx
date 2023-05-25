@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Balancer from 'react-wrap-balancer'
-
 import { siteConfig } from '@/site-config'
 import { buttonVariants } from '@/components/ui/button'
 import { Icons } from '@/components/icons'
