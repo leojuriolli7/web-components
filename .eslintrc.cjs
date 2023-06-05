@@ -1,14 +1,14 @@
 /** @type {import("eslint").Linter.Config} */
 const config = {
   root: true,
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: [
-      "./example/*/tsconfig.json",
-      "./src/tsconfig.json",
-      "./docs/tsconfig.json",
-    ],
+      './example/*/tsconfig.json',
+      './src/tsconfig.json',
+      './docs/tsconfig.json'
+    ]
   },
   // plugins: ["@typescript-eslint"],
   // extends: [
@@ -26,12 +26,12 @@ const config = {
   //   ],
   // },
   ignorePatterns: [
-    "**/dist/**",
-    "./scripts/*",
-    "**/node_modules/**",
-    ".eslintrc.cjs",
-    "**/config.*",
-  ],
-};
+    '**/dist/**',
+    './scripts/*',
+    '**/node_modules/**',
+    '.eslintrc.cjs',
+    '**/config.*'
+  ]
+}
 
-module.exports = config;
+module.exports = config

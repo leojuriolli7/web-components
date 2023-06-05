@@ -2,29 +2,29 @@
 
 TypeScript React components library monorepo.
 
-**TO-DOS:**
+- 🏎 [Turborepo](https://turbo.build/repo) — High-performance build system for Monorepos.
+- 🚀 [React](https://reactjs.org/) — JavaScript library for user interfaces.
+- 🛠 [Tsup](https://github.com/egoist/tsup) — TypeScript bundler powered by esbuild.
+- 🛠 [pnpm](https://github.com/pnpm/pnpm) — Fast, disk space efficient package manager.
+- 🛠 [pnpm workspaces](https://pnpm.io/workspaces) — Built-in support for monorepos. A single workspace to unite multiple projects inside a single repo.
 
-**Step 1:**
+As well as a few others tools preconfigured:
 
-- [x] Implement atomic design
-- [x] Fast Refresh for nextjs example project with correct paths (@molecules, @atoms, etc.)
-- [x] Remove packages directory
-- [x] Canary release workflow
-- [x] Proper versioning of alpha releases (Alpha release script)
+- [TypeScript](https://www.typescriptlang.org/) for static type checking.
+- [ESLint](https://eslint.org/) & [manypkg](https://github.com/Thinkmill/manypkg) for code linting.
+- [Prettier](https://prettier.io) for code formatting.
+- [Changesets](https://github.com/changesets/changesets) for managing versioning and changelogs.
+- [GitHub Actions](https://github.com/changesets/action) for fully automated package publishing.
 
-**Step 2:**
+By using pnpm and turbo, we have access to **powerful and efficient caching on the cloud for our builds on Github Actions.**
 
-- [x] Start matching versions (Next version, React, etc.) - Downgraded to next 12, installed styled-components.
-- [x] Downgrade docs to Next 12.
-  - [x] Add fonts.
-- [x] Test build & install on another project. - Added `react-shim.js`
+## Highlights
 
-**Step 3:**
+- Changesets configured for version control and alpha releases.
+- Github actions for publishing new versions, with caching for increased performance.
+  > While testing, I observed a 100% build time improvement on an 80k lines React library.
+- tsup fully configured for a React components library use-case.
+- Documentation project ready with Tailwind and MDX.
+- Example Next.js project ready.
 
-- [x] Add Prettier
-- [ ] Port over all atoms, add docs for `Text` & `Button` components, add library theme docs. (colors & fonts) [For reference.](https://628d031b55e942004ac95df1-xwtlkiyzgj.chromatic.com/)
-
-**Step 4:**
-
-- [ ] Port other components and dependencies over.
-- [ ] Refactor Github Action PR (Publish changes without opening new PR)
+This repo was created as a POC and had to be downgraded to Next.js 12 & fitted with `styled-components` at one point, but to access it before these changes: https://github.com/leojuriolli7/web-components/tree/c28674b601307bb6d64d54adcc327eabc123b233
