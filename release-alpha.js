@@ -8,9 +8,8 @@ import { exec } from 'child_process'
  * `pnpm release:alpha --tag=<tag name>`
  *
  * It will:
- * 1. Update the version in package.json to a new alpha version.
- * 2. Build the library.
- * 3. Publish the library to npm with the specified tag.
+ * 1. Build the library.
+ * 2. Publish the library to npm with the specified tag.
  */
 
 const pkgJsonPath = 'src/package.json'
@@ -30,41 +29,6 @@ try {
     usage()
   }
 
-  const pkg = JSON.parse(fs.readFileSync(pkgJsonPath, 'utf-8'))
-  const oldVersion = pkg.version
-  const [major, minor, third] = oldVersion.split('.')
-  const patch = third.split('-')[0]
-
-  // check if string ends in `<tag-name>.<numbers>`.
-  const pattern = new RegExp(tagName + '\\.(\\d+)$')
-
-  const getNewVersion = () => {
-    const semver = `${major}.${minor}.${patch}`
-    const alpha = `${semver}-${tagName}`
-    const oldVersionIsAlpha = oldVersion.match(pattern)
-
-    if (oldVersionIsAlpha) {
-      // increment the alpha version number.
-      return `${alpha}.${Number(oldVersionIsAlpha?.[1]) + 1}`
-    } else {
-      return `${alpha}.0`
-    }
-  }
-
-  const newVersion = getNewVersion()
-
-  pkg.version = newVersion
-
-  const content = JSON.stringify(pkg, null, '\t') + '\n'
-  const newContent = content.replace(
-    new RegExp(`"@juriolli/\\*": "${oldVersion}"`, 'g'),
-    `"@juriolli/*": "${newVersion}"`
-  )
-
-  fs.writeFileSync(pkgJsonPath, newContent)
-
-  console.log('Releasing alpha version with tag name:', tagName)
-
   exec('pnpm build', (err, stdout) => {
     if (err) {
       console.log('Build error:', err)
@@ -73,17 +37,33 @@ try {
 
     console.log(stdout)
 
-    exec(
-      `pnpm publish ./src --access public --tag ${tagName} --no-git-checks`,
-      (err, stdout) => {
-        if (err) {
-          console.log('Publish error:', err)
-          process.exit(1)
-        }
-
-        console.log(stdout)
+    exec(`pnpm changeset version --snapshot ${tagName}`, (err, stdout) => {
+      if (err) {
+        console.log('Changeset error:', err)
+        process.exit(1)
       }
-    )
+
+      console.log(stdout)
+
+      exec(
+        `pnpm changeset publish --no-git-tag --tag ${tagName}`,
+        (err, stdout) => {
+          if (err) {
+            console.log('Publish error:', err)
+            process.exit(1)
+          }
+
+          console.log(stdout)
+
+          console.log('Released alpha version with tag name:', tagName)
+
+          console.log(
+            `You can install it with:`,
+            `yarn add @juriolli/web-components@${tagName}`
+          )
+        }
+      )
+    })
   })
 } catch (error) {
   console.error(error)

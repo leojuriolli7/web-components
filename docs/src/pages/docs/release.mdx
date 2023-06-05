@@ -1,5 +1,9 @@
 # Workflow
 
+Our release workflow is powered by [Changesets](https://github.com/changesets/changesets).
+
+> The changesets workflow is designed to help when people are making changes, all the way through to publishing. It lets contributors declare how their changes should be released, then we automate updating package versions, and changelogs, and publishing new versions of packages based on the provided information.
+
 1. Create branch from main, apply your changes.
 2. Commit your changes, open PR, wait for review.
 3. When the PR is approved, run `pnpm changeset` to generate your changelog, commit the changelog.
@@ -8,17 +12,23 @@
 
 ## Releasing alpha version
 
-To release an alpha version, run this command:
+To release an alpha version we use Changesets' [snapshot releases.](https://github.com/changesets/changesets/blob/main/docs/snapshot-releases.md) To create a snapshot release, first create a changeset, then run the release alpha script:
 
 ```sh
+  ## Creating a changeset with your changes:
+  pnpm changeset
+
+  ## Releasing the alpha version:
   pnpm release:alpha --tag=<tag-name>
 ```
 
-### Example:
+#### Example
 
 Releasing alpha version with tag `bugfix/234`
 
 ```sh
+  pnpm changeset
+
   pnpm release:alpha --tag=bugfix/234
 ```
 
@@ -28,16 +38,22 @@ Installing this tag on another project:
   yarn add @juriolli/web-components@bugfix/234
 ```
 
-<Callout>
+<Callout type='info'>
   You do not need to specify a version bump on the tag flag, the version will
   automatically be bumped with each alpha release. eg:
 
 ```sh
 ## First release:
-pnpm release:alpha --tag=bugfix/234 ## Result:  0.0.5-bugfix/234.0
+pnpm release:alpha --tag=bugfix/234
 
 ## Next release:
-pnpm release:alpha --tag=bugfix/234 ## Result:  0.0.5-bugfix/234.1
+pnpm release:alpha --tag=bugfix/234
 ```
 
 </Callout>
+
+### What to do with the alpha changes
+
+Changesets recommends **not pushing** the changes from the release command to any branch.
+
+Reference: [Changesets snapshots documentation.](https://github.com/changesets/changesets/blob/main/docs/snapshot-releases.md#what-to-do-with-the-snapshot-branch)
