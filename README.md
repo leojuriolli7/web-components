@@ -19,7 +19,7 @@ As well as a few others tools preconfigured:
 By using pnpm and turbo, we have access to **powerful and efficient caching on the cloud for our builds on Github Actions.**
 
 ## Highlights
-- **Performant: I observed an 100% increase in build-times (locally and CI) without considering cache, by porting an 80k lines React components library from Rollup, babel and webpack to this setup.**
+- **Performant: By porting an 80k lines React components library from Rollup, babel and webpack to this setup, build time went from 18 minutes to only 20 seconds.**
 - Changesets configured for version control and alpha releases.
 - Github actions for publishing new versions, with caching for increased performance.
 - tsup fully configured for a React components library use-case.
